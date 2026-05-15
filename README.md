@@ -1,73 +1,60 @@
-# Welcome to your Lovable project
+# Ruby Pictures
 
-## Project info
+Official website for **Ruby Pictures** — an Ethiopian film production company dedicated to capturing stories that matter, led by cinematographer and director Fitsum Beza.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## About
 
-## How can I edit this code?
+Ruby Pictures creates music videos, short films, and visual content rooted in Ethiopian culture and global storytelling. This site is the public face of that work: a portfolio, a point of contact, and a window into the vision behind the lens.
 
-There are several ways of editing your application.
+## Tech Stack
 
-**Use Lovable**
+- [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/) — dev server and build tool
+- [Tailwind CSS](https://tailwindcss.com/) — styling
+- [Framer Motion](https://www.framer.com/motion/) — animations
+- [shadcn/ui](https://ui.shadcn.com/) — UI components
+- [Express](https://expressjs.com/) — backend server
+- [MongoDB](https://www.mongodb.com/) — content management
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+## Getting Started
 
-Changes made via Lovable will be committed automatically to this repo.
-
-**Use your preferred IDE**
-
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
-
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
+Requires [Node.js](https://nodejs.org/) (v18+) and npm.
 
 ```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+# Clone the repo
+git clone https://github.com/fitsumbeza1/website.git
+cd website
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+# Install dependencies
+npm install
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+# Start the development server
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The site runs at `http://localhost:8080`.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+To also run the backend server alongside the frontend:
 
-**Use GitHub Codespaces**
+```sh
+npm run start
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Project Structure
 
-## What technologies are used for this project?
+```
+src/
+  pages/       # Route-level page components
+  components/  # Shared UI components
+  contexts/    # React context (CMS, auth, theme)
+  hooks/       # Custom hooks
+  data/        # Static data
+server/        # Express backend
+public/        # Static assets
+```
 
-This project is built with:
+## Contact
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+For bookings and inquiries: [rubypictures.ethiopia@gmail.com](mailto:rubypictures.ethiopia@gmail.com)
 
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Instagram: [@fitsum_beza](https://instagram.com/fitsum_beza)
