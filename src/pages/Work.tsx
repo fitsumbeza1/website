@@ -45,11 +45,9 @@ const Work = () => {
   const getItemsByCategory = (category: string) =>
     allItems.filter(item => item.category === category);
 
-  const sortedCategories = [...new Set(allItems.map(item => item.category))].sort((a, b) => {
-    const orderA = categoryConfig[a]?.order ?? 99;
-    const orderB = categoryConfig[b]?.order ?? 99;
-    return orderA - orderB;
-  });
+  const sortedCategories = [...new Set(allItems.map(item => item.category))]
+    .sort((a, b) => (categoryConfig[a]?.order ?? 99) - (categoryConfig[b]?.order ?? 99))
+    .filter(cat => getItemsByCategory(cat).length > 0);
 
   return (
     <Layout>
@@ -70,7 +68,6 @@ const Work = () => {
         <div className="mt-16 space-y-0">
           {sortedCategories.map((category, i) => {
             const items = getItemsByCategory(category);
-            if (items.length === 0) return null;
             const config = categoryConfig[category];
             return (
               <motion.div
