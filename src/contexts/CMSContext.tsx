@@ -38,6 +38,17 @@ const defaultPortfolioItems: PortfolioItem[] = [
     updatedAt: new Date().toISOString(),
   },
   {
+    _id: '4',
+    title: 'DOBO',
+    description: 'A documentary that steps into the everyday lives of those living on the margins — raw, unfiltered, and deeply human. DOBO is a portrait of resilience, shot with honesty and care in the streets and communities of Ethiopia.',
+    coverImage: 'https://res.cloudinary.com/dhb7y3wk3/image/upload/v1771928350/dobo_1po_jbhe8m.jpg',
+    category: 'documentaries',
+    priority: 2,
+    published: true,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+  {
     _id: '1',
     title: 'TOXIC LOVE',
     description: 'A story of love and danger.',
