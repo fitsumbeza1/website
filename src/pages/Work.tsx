@@ -65,25 +65,30 @@ const Work = () => {
         </motion.div>
 
         {/* Documentary Projects — featured directly */}
-        {getItemsByCategory('documentaries').length > 0 && (
-          <div className="mt-16 border-t border-border pt-16">
-            <div className="flex items-center gap-4 mb-10">
-              <span className="font-mono text-xs text-muted-foreground">01</span>
-              <p className="font-mono text-xs uppercase tracking-[0.3em] text-ruby">Documentary</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {getItemsByCategory('documentaries').map((item, i) => (
+        {getItemsByCategory('documentaries').length > 0 && (() => {
+          const docs = getItemsByCategory('documentaries');
+          const [first, ...rest] = docs;
+          return (
+            <div className="mt-16 border-t border-border pt-16">
+              <div className="flex items-center gap-4 mb-10">
+                <span className="font-mono text-xs text-muted-foreground">01</span>
+                <p className="font-mono text-xs uppercase tracking-[0.3em] text-ruby">Documentary</p>
+              </div>
+
+              {/* Layout: landscape card left, portrait poster(s) right */}
+              <div className="flex flex-col md:flex-row gap-8 items-start">
+                {/* First item — landscape */}
                 <motion.div
-                  key={item._id}
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: i * 0.12 }}
+                  transition={{ duration: 0.5 }}
+                  className="w-full md:flex-1"
                 >
-                  <Link to={`/work/${item.category}/${item._id}`} className="group block">
+                  <Link to={`/work/${first.category}/${first._id}`} className="group block">
                     <div className="relative aspect-[16/9] overflow-hidden mb-4">
                       <img
-                        src={item.coverImage}
-                        alt={item.title}
+                        src={first.coverImage}
+                        alt={first.title}
                         className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -91,17 +96,51 @@ const Work = () => {
                       </div>
                     </div>
                     <h3 className="font-display text-xl font-bold tracking-tight group-hover:text-ruby transition-colors duration-300">
-                      {item.title}
+                      {first.title}
                     </h3>
                     <p className="text-muted-foreground text-sm mt-1 leading-relaxed line-clamp-2">
-                      {item.description}
+                      {first.description}
                     </p>
                   </Link>
                 </motion.div>
-              ))}
+
+                {/* Remaining items — portrait posters */}
+                {rest.length > 0 && (
+                  <div className="flex gap-6 md:w-auto">
+                    {rest.map((item, i) => (
+                      <motion.div
+                        key={item._id}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.5, delay: (i + 1) * 0.12 }}
+                        className="w-48 md:w-56 shrink-0"
+                      >
+                        <Link to={`/work/${item.category}/${item._id}`} className="group block">
+                          <div className="relative aspect-[2/3] overflow-hidden mb-4">
+                            <img
+                              src={item.coverImage}
+                              alt={item.title}
+                              className="w-full h-full object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105"
+                            />
+                            <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                              <Play className="w-10 h-10 text-white" />
+                            </div>
+                          </div>
+                          <h3 className="font-display text-base font-bold tracking-tight group-hover:text-ruby transition-colors duration-300">
+                            {item.title}
+                          </h3>
+                          <p className="text-muted-foreground text-xs mt-1 leading-relaxed line-clamp-2">
+                            {item.description}
+                          </p>
+                        </Link>
+                      </motion.div>
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
-          </div>
-        )}
+          );
+        })()}
 
         {/* Other Categories */}
         <div className="mt-16 space-y-0">
