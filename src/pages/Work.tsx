@@ -77,18 +77,18 @@ const Work = () => {
 
               {/* 50/50 grid — each card keeps its natural proportions */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
-                {/* Coffee Project — landscape 16:9 */}
+                {/* Coffee Project — portrait 4:5 matching natural image ratio */}
                 <motion.div
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
                 >
                   <Link to={`/work/${first.category}/${first._id}`} className="group block">
-                    <div className="relative aspect-[16/9] overflow-hidden mb-4">
+                    <div className="relative aspect-[4/5] overflow-hidden mb-4">
                       <img
                         src={first.coverImage}
                         alt={first.title}
-                        className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105"
+                        className="w-full h-full object-cover object-center grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105"
                       />
                       <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                         <Play className="w-14 h-14 text-white" />
