@@ -70,9 +70,14 @@ const Work = () => {
           const [first, ...rest] = docs;
           return (
             <div className="mt-16 border-t border-border pt-16">
-              <div className="flex items-center gap-4 mb-10">
-                <span className="font-mono text-xs text-muted-foreground">01</span>
-                <p className="font-mono text-xs uppercase tracking-[0.3em] text-ruby">Documentary</p>
+              <div className="flex items-start gap-6 md:gap-10 mb-10">
+                <span className="font-mono text-xs text-muted-foreground mt-2 w-8 shrink-0">01</span>
+                <div className="space-y-2">
+                  <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tight">DOCUMENTARY</h2>
+                  <p className="text-muted-foreground text-sm max-w-md leading-relaxed hidden md:block">
+                    {categoryConfig['documentaries'].description}
+                  </p>
+                </div>
               </div>
 
               {/* 50/50 grid — each card keeps its natural proportions */}
