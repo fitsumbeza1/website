@@ -54,7 +54,7 @@ const defaultHeroSlides = [
   {
     id: "hero-2",
     videoUrl: "https://res.cloudinary.com/dhb7y3wk3/video/upload/v1770919216/0212_ax1hc5.mp4",
-    fallbackImage: "https://res.cloudinary.com/dhb7y3wk3/image/upload/v1770910850/DSC06114_s1emfc.jpg",
+    fallbackImage: "https://res.cloudinary.com/dcj3zekyw/image/upload/f_auto,q_auto/IMG_2174_cdxjsh",
     title: "The Coffee Project",
     description: "Our Latest Project",
   },

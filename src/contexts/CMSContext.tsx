@@ -30,7 +30,7 @@ const defaultPortfolioItems: PortfolioItem[] = [
     _id: '3',
     title: 'THE COFFEE PROJECT',
     description: 'A visual journey through Ethiopia\'s ancient coffee culture — from highland farm to city cup. Shot across the lush Kerchanse highlands, this documentary follows the hands and stories behind one of the world\'s most beloved traditions.',
-    coverImage: 'https://res.cloudinary.com/dhb7y3wk3/image/upload/v1770910850/DSC06114_s1emfc.jpg',
+    coverImage: 'https://res.cloudinary.com/dcj3zekyw/image/upload/f_auto,q_auto/IMG_2174_cdxjsh',
     category: 'documentaries',
     priority: 1,
     published: true,
