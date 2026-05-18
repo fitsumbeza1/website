@@ -425,13 +425,9 @@ const Index = () => {
       </section>
 
       {/* Hero Carousel */}
-      <section id="hero-section" className="relative h-screen flex items-end overflow-hidden">
-        {/* No animation wrapper - instant slide change */}
-        <div
-          key={currentSlide}
-          className="absolute inset-0"
-        >
-          {/* Background video/image */}
+      <section id="hero-section" className="relative h-screen flex items-center justify-center overflow-hidden">
+        {/* Background video/image */}
+        <div key={currentSlide} className="absolute inset-0">
           <div className="absolute inset-0 overflow-hidden">
             {loadedVideos.has(currentSlide) ? (
               <video
@@ -439,7 +435,7 @@ const Index = () => {
                 muted
                 loop
                 playsInline
-                className="w-full h-full object-cover scale-150"
+                className="w-full h-full object-cover"
               >
                 <source src={heroSlidesData[currentSlide]?.videoUrl} type="video/mp4" />
               </video>
@@ -447,19 +443,18 @@ const Index = () => {
               <img
                 src={heroSlidesData[currentSlide]?.fallbackImage}
                 alt={heroSlidesData[currentSlide]?.title}
-                className="w-full h-full object-cover scale-150"
+                className="w-full h-full object-cover"
               />
             )}
+            {/* Lighter overlay so the image shows through */}
+            <div className="absolute inset-0 bg-black/50" />
           </div>
 
-          {/* Hidden video element to preload */}
+          {/* Hidden video preload */}
           {!loadedVideos.has(currentSlide) && heroSlidesData[currentSlide]?.videoUrl && (
             <video
-              autoPlay
-              muted
-              loop
-              playsInline
-              className="absolute inset-0 w-full h-full object-cover scale-150 opacity-0"
+              autoPlay muted loop playsInline
+              className="absolute inset-0 w-full h-full object-cover opacity-0"
               onLoadedData={() => handleVideoLoad(currentSlide)}
               onError={() => handleVideoError(currentSlide, () => {})}
             >
@@ -469,42 +464,29 @@ const Index = () => {
         </div>
 
         {/* Navigation arrows */}
-        <button
-          onClick={prevHeroSlide}
-          className="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-3 text-white/50 hover:text-white transition-colors"
-          aria-label="Previous slide"
-        >
+        <button onClick={prevHeroSlide} className="absolute left-4 top-1/2 -translate-y-1/2 z-20 p-3 text-white/50 hover:text-white transition-colors" aria-label="Previous slide">
           <ChevronLeft className="w-8 h-8" />
         </button>
-        <button
-          onClick={nextHeroSlide}
-          className="absolute right-4 top-1/2 -translate-y-1/2 z-20 p-3 text-white/50 hover:text-white transition-colors"
-          aria-label="Next slide"
-        >
+        <button onClick={nextHeroSlide} className="absolute right-4 top-1/2 -translate-y-1/2 z-20 p-3 text-white/50 hover:text-white transition-colors" aria-label="Next slide">
           <ChevronRight className="w-8 h-8" />
         </button>
 
-        {/* Content */}
-        <div className="relative z-10 px-6 md:px-12 pb-16 md:pb-24 w-full max-w-7xl mx-auto">
+        {/* Centered content */}
+        <div className="relative z-10 text-center px-6">
           <motion.div
             key={currentSlide}
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.3 }}
+            className="flex flex-col items-center"
           >
-              <p className="font-mono text-xs uppercase tracking-[0.3em] text-gray-300 mb-4">
+            <p className="font-mono text-xs uppercase tracking-[0.3em] text-gray-300 mb-6">
               {heroSlidesData[currentSlide].description}
             </p>
-            <h1 className="font-display text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-[0.9] text-white uppercase">
+            <h1 className="font-display text-6xl md:text-8xl lg:text-9xl font-bold tracking-tighter leading-[0.85] text-white uppercase mb-10">
               {heroSlidesData[currentSlide].title}
-              {heroSlidesData[currentSlide].subtitle && (
-                <>
-                  <br />
-                  <span className="text-gradient-ruby">{heroSlides[currentSlide].subtitle}</span>
-                </>
-              )}
             </h1>
-            <div className="mt-8 flex items-center gap-6">
+            <div className="flex items-center justify-center gap-6">
               <Link
                 to="/work"
                 className="font-mono text-sm uppercase tracking-widest border border-white text-white px-8 py-3 hover:bg-white hover:text-black transition-all duration-500"
@@ -513,7 +495,7 @@ const Index = () => {
               </Link>
               <Link
                 to="/contact"
-                className="font-mono text-sm uppercase tracking-widest text-gray-300 hover:text-white transition-colors line-reveal"
+                className="font-mono text-sm uppercase tracking-widest border border-white/50 text-white/80 px-8 py-3 hover:border-white hover:text-white transition-all duration-500"
               >
                 Get in Touch
               </Link>
