@@ -11,6 +11,7 @@ const logoUrl = "https://res.cloudinary.com/dhb7y3wk3/image/upload/v1770913043/r
 
 // Default fallback photos
 const defaultRubyPhotos = [
+  "https://res.cloudinary.com/dcj3zekyw/image/upload/q_auto/f_auto/v1779129094/IMG_4817_mgw5fo.png",
   "https://res.cloudinary.com/dhb7y3wk3/image/upload/v1772249801/IMG_4236_lpvxsk.jpg",
   "https://res.cloudinary.com/dhb7y3wk3/image/upload/v1772249801/IMG_4237_wvodrh.jpg",
   "https://res.cloudinary.com/dhb7y3wk3/image/upload/v1772249801/IMG_4240_j1lx30.jpg",
@@ -534,9 +535,11 @@ const Index = () => {
           <h2 className="font-display text-6xl md:text-8xl font-bold tracking-tighter mb-6">
             Ruby Pictures
           </h2>
-          <p className="text-foreground/60 text-lg max-w-2xl mx-auto leading-relaxed">
-            A premier film production company based in Addis Ababa, Ethiopia —
-            capturing life's most powerful stories through stunning visuals and compelling cinema.
+          <p className="text-foreground/60 text-lg max-w-2xl mx-auto leading-relaxed mb-4">
+            A premier film production company based in Addis Ababa and Nairobi — creating bold cinematic experiences through stunning visuals, authentic emotion, and powerful storytelling.
+          </p>
+          <p className="text-foreground/40 text-base max-w-xl mx-auto leading-relaxed italic">
+            We don't just make videos — we craft timeless stories that people feel.
           </p>
         </div>
 
@@ -698,6 +701,83 @@ const Index = () => {
       </section>
 
     
+
+      {/* Movies Showcase */}
+      <section className="border-t border-border py-24 bg-background">
+        <div className="px-6 md:px-12 max-w-7xl mx-auto">
+          <div className="flex items-end justify-between mb-12">
+            <div>
+              <p className="font-mono text-xs uppercase tracking-[0.3em] text-muted-foreground mb-2">Feature Films</p>
+              <h2 className="font-display text-4xl md:text-6xl font-bold tracking-tighter">Movies</h2>
+            </div>
+            <Link
+              to="/work/movies"
+              className="font-mono text-xs uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors duration-300 hidden md:block"
+            >
+              View All →
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {portfolioData.find(c => c.id === 'movies')?.items.filter(item => item.coverImage).map((movie, i) => (
+              <motion.div
+                key={movie.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: i * 0.15 }}
+              >
+                <Link to={`/work/movies/${movie.id}`} className="group block relative overflow-hidden">
+                  <div className="relative aspect-[2/3] bg-black overflow-hidden">
+                    <img
+                      src={movie.coverImage}
+                      alt={movie.title}
+                      className="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-700 group-hover:scale-105"
+                    />
+                    {/* Dark gradient overlay at bottom */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/10 to-transparent" />
+                    {/* Play button */}
+                    {movie.videoUrl && (
+                      <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div className="w-16 h-16 rounded-full border-2 border-white flex items-center justify-center bg-black/30">
+                          <Play className="w-7 h-7 text-white ml-1" />
+                        </div>
+                      </div>
+                    )}
+                    {/* Title overlaid on image */}
+                    <div className="absolute bottom-0 left-0 right-0 p-6">
+                      <p className="font-mono text-xs uppercase tracking-[0.3em] text-white/60 mb-2">Ruby Pictures</p>
+                      <h3 className="font-display text-3xl md:text-4xl font-bold tracking-tight text-white">
+                        {movie.title}
+                      </h3>
+                      {movie.description && (
+                        <p className="text-white/70 text-sm mt-2 leading-relaxed line-clamp-2">{movie.description}</p>
+                      )}
+                    </div>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+
+            {/* Coming Soon placeholder if only one movie has a poster */}
+            {(portfolioData.find(c => c.id === 'movies')?.items.filter(item => item.coverImage).length ?? 0) === 1 && (
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.15 }}
+                className="relative aspect-[2/3] bg-secondary/40 border border-border flex flex-col items-center justify-center gap-4"
+              >
+                <div className="w-16 h-16 rounded-full border border-border flex items-center justify-center">
+                  <Play className="w-6 h-6 text-muted-foreground ml-1" />
+                </div>
+                <p className="font-display text-2xl font-bold tracking-tight text-muted-foreground">Coming Soon</p>
+                <p className="font-mono text-xs uppercase tracking-widest text-muted-foreground/50">Next Feature Film</p>
+              </motion.div>
+            )}
+          </div>
+        </div>
+      </section>
 
       {/* Testimonials Carousel - Small at bottom */}
       <section className="py-12 border-t border-border bg-secondary/20">

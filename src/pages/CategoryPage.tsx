@@ -90,7 +90,7 @@ const CategoryPage = () => {
         </motion.div>
 
         {/* Video Grid with Cover Images */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-16">
           {items.map((item, index) => (
             <motion.div
               key={item.id}
@@ -102,7 +102,7 @@ const CategoryPage = () => {
                 to={`/work/${categoryId}/${item.id}`}
                 className="group block"
               >
-                <div className={`relative ${isPhotoCategory ? 'aspect-video' : getImageStyle(item).aspectRatioClass} max-w-xs bg-muted overflow-hidden mb-4`}>
+                <div className={`relative ${isPhotoCategory ? 'aspect-video' : 'aspect-video'} w-full bg-muted overflow-hidden mb-4`}>
                   {item.videoUrl ? (
                     <img
                       src={getYouTubeThumbnailUrl(item.videoUrl)}
@@ -133,7 +133,7 @@ const CategoryPage = () => {
                     </div>
                   )}
                 </div>
-                <h3 className="font-display text-xl font-semibold tracking-tight group-hover:text-ruby transition-colors duration-500">
+                <h3 className="font-display text-2xl font-bold tracking-tight group-hover:text-ruby transition-colors duration-500">
                   {item.title}
                 </h3>
               </Link>
