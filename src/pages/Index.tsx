@@ -674,7 +674,7 @@ const Index = () => {
               transition={{ delay: i * 0.05 }}
             >
               <Link
-                to={`/work/${category.id}`}
+                to={category.id === 'documentaries' ? '/work#documentary' : `/work/${category.id}`}
                 className="group flex items-center justify-between py-8 border-b border-border hover:border-foreground transition-colors duration-500"
               >
                 <div className="flex items-center gap-6 md:gap-12">

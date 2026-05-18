@@ -69,7 +69,7 @@ const Work = () => {
           const docs = getItemsByCategory('documentaries');
           const [first, ...rest] = docs;
           return (
-            <div className="mt-16 border-t border-border pt-16">
+            <div id="documentary" className="mt-16 border-t border-border pt-16">
               <div className="flex items-start gap-6 md:gap-10 mb-10">
                 <span className="font-mono text-xs text-muted-foreground mt-2 w-8 shrink-0">01</span>
                 <div className="space-y-2">
