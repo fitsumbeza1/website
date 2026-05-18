@@ -540,38 +540,58 @@ const Index = () => {
 
 
       {/* Ruby Pictures Section */}
-      <section className="py-20 border-t border-b border-border bg-secondary/10">
-        <div className="px-6 md:px-12 max-w-7xl mx-auto">
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
-            <div>
-              <p className="font-mono text-xs uppercase tracking-[0.3em] text-muted-foreground mb-2">Welcome to</p>
-              <h2 className="font-display text-4xl md:text-6xl font-bold tracking-tighter">Ruby Pictures</h2>
-            </div>
-            <p className="text-foreground/70 text-lg max-w-xl">
-              A premier film production company based in Addis Ababa, Ethiopia. 
-              We specialize in capturing life's most precious moments through stunning visuals 
-              and compelling storytelling.
+      <section className="border-t border-b border-border">
+        {/* Centered header */}
+        <div className="py-24 px-6 md:px-12 text-center">
+          <img
+            src={logoUrl}
+            alt="Ruby Pictures"
+            className="h-14 mx-auto mb-8 opacity-70 dark:invert"
+          />
+          <p className="font-mono text-xs uppercase tracking-[0.3em] text-muted-foreground mb-4">Welcome to</p>
+          <h2 className="font-display text-6xl md:text-8xl font-bold tracking-tighter mb-6">
+            Ruby Pictures
+          </h2>
+          <p className="text-foreground/60 text-lg max-w-2xl mx-auto leading-relaxed">
+            A premier film production company based in Addis Ababa, Ethiopia —
+            capturing life's most powerful stories through stunning visuals and compelling cinema.
+          </p>
+        </div>
+
+        {/* Service cards — full-width edge-to-edge with dividers */}
+        <div className="grid grid-cols-1 md:grid-cols-3 border-t border-border">
+          <Link
+            to="/photos"
+            className="group flex flex-col items-center text-center p-12 border-b md:border-b-0 md:border-r border-border hover:bg-secondary/30 transition-all duration-500"
+          >
+            <Camera className="w-8 h-8 text-ruby mb-6 group-hover:scale-110 transition-transform duration-300" />
+            <h3 className="font-display text-2xl font-bold mb-3 group-hover:text-ruby transition-colors duration-300">Photography</h3>
+            <p className="text-foreground/55 text-sm leading-relaxed max-w-xs">
+              Professional photography for events, portraits, products, and film productions.
             </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Link to="/photos" className="border border-border p-6 hover:border-ruby/50 transition-colors duration-500 group">
-              <Camera className="w-8 h-8 text-ruby mb-4" />
-              <h3 className="font-display text-xl font-semibold mb-2 group-hover:text-ruby transition-colors">Photography</h3>
-              <p className="text-foreground/60 text-sm">Professional photography services for events, portraits, products, and projects.</p>
-            </Link>
-            <Link to="/work" className="border border-border p-6 hover:border-ruby/50 transition-colors duration-500 group">
-              <Play className="w-8 h-8 text-ruby mb-4" />
-              <h3 className="font-display text-xl font-semibold mb-2 group-hover:text-ruby transition-colors">Film Production</h3>
-              <p className="text-foreground/60 text-sm">Cinematic video production for music videos, commercials, documentaries, and more.</p>
-            </Link>
-            <Link to="/contact" className="border border-border p-6 hover:border-ruby/50 transition-colors duration-500 group">
-              <div className="w-8 h-8 text-ruby mb-4 flex items-center justify-center">
-                <span className="font-display text-2xl font-bold">✉</span>
-              </div>
-              <h3 className="font-display text-xl font-semibold mb-2 group-hover:text-ruby transition-colors">Get in Touch</h3>
-              <p className="text-foreground/60 text-sm">Let's create something amazing together. Contact us for your next project.</p>
-            </Link>
-          </div>
+          </Link>
+          <Link
+            to="/work"
+            className="group flex flex-col items-center text-center p-12 border-b md:border-b-0 md:border-r border-border hover:bg-secondary/30 transition-all duration-500"
+          >
+            <Play className="w-8 h-8 text-ruby mb-6 group-hover:scale-110 transition-transform duration-300" />
+            <h3 className="font-display text-2xl font-bold mb-3 group-hover:text-ruby transition-colors duration-300">Film Production</h3>
+            <p className="text-foreground/55 text-sm leading-relaxed max-w-xs">
+              Cinematic video production for music videos, documentaries, commercials, and more.
+            </p>
+          </Link>
+          <Link
+            to="/contact"
+            className="group flex flex-col items-center text-center p-12 hover:bg-secondary/30 transition-all duration-500"
+          >
+            <div className="w-8 h-8 text-ruby mb-6 flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+              <span className="font-display text-2xl font-bold">✉</span>
+            </div>
+            <h3 className="font-display text-2xl font-bold mb-3 group-hover:text-ruby transition-colors duration-300">Get in Touch</h3>
+            <p className="text-foreground/55 text-sm leading-relaxed max-w-xs">
+              Let's create something remarkable together. Reach out for your next project.
+            </p>
+          </Link>
         </div>
       </section>
 
