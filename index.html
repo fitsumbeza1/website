@@ -20,6 +20,20 @@
     
     <link rel="icon" type="image/svg+xml" href="/favicon.ico"/>
     
+    <!-- SPA redirect handler for GitHub Pages -->
+    <script>
+      (function() {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect !== location.href) {
+          history.replaceState(null, null, redirect);
+        }
+        var p = new URLSearchParams(location.search).get('p');
+        if (p) {
+          history.replaceState(null, null, p);
+        }
+      })();
+    </script>
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZM4BF06JY"></script>
     <script>
