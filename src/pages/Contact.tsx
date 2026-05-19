@@ -12,9 +12,9 @@ const Contact = () => {
   
   // Get social links and contact info from about profile
   const socialLinks = aboutProfile?.socialLinks || [];
-  const emailLink = socialLinks.find(l => l.platform.toLowerCase().includes('email'))?.url || aboutPageContent?.contactEmail || 'rubypictures.ethiopia@gmail.com';
-  const instagramLink = socialLinks.find(l => l.platform.toLowerCase().includes('instagram'))?.url || 'https://instagram.com/ruby.pictures';
-  const telegramLink = socialLinks.find(l => l.platform.toLowerCase().includes('telegram'))?.url || 'https://t.me/ruby_pictures';
+  const emailLink = socialLinks.find(l => l.platform.toLowerCase().includes('email'))?.url || aboutPageContent?.contactEmail || 'fitsumbeza1@gmail.com';
+  const instagramLink = socialLinks.find(l => l.platform.toLowerCase().includes('instagram'))?.url || 'https://instagram.com/fitsum_beza';
+  const telegramLink = socialLinks.find(l => l.platform.toLowerCase().includes('telegram'))?.url || 'https://t.me/iboy12';
   const whatsappLink = socialLinks.find(l => l.platform.toLowerCase().includes('whatsapp'))?.url || 'https://wa.me/251921938039';
   const contactPhone = aboutPageContent?.contactPhone || '+251 921 938 039';
   const contactAddress = aboutPageContent?.contactAddress || 'Goro, Addis Ababa, Ethiopia';
