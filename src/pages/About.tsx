@@ -33,7 +33,7 @@ const getAspectRatioClass = (orientation?: ImageOrientation): string => {
 
 // About photos from about.txt
 const aboutPhotos = [
-  "https://res.cloudinary.com/dhb7y3wk3/image/upload/v1770913656/IMG_2100_toyssn.jpg",
+  "https://res.cloudinary.com/dcj3zekyw/image/upload/q_auto/f_auto/v1779231027/A79AC731-13AE-4BBE-9F6C-AA64D18AC79C_wmxyy0.png",
   "https://res.cloudinary.com/dhb7y3wk3/image/upload/v1770913644/IMG_4139_cypqb0.jpg",
   "https://res.cloudinary.com/dhb7y3wk3/image/upload/v1770913646/IMG_4238_mu5ur2.jpg",
   "https://res.cloudinary.com/dhb7y3wk3/image/upload/v1770913634/IMG_7737_jixu0f.jpg",
