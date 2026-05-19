@@ -89,7 +89,8 @@ const App = () => {
             <TooltipProvider>
               <Toaster />
               <Sonner />
-              <BrowserRouter basename={import.meta.env.BASE_URL}>
+              <BrowserRouter basename={window.location.hostname === 'fitsumbeza1.github.io' ? '/website' : '/'}>
+
                 <ScrollToTop />
                 <AnimatePresence mode="wait">
                   {isLoading ? (
