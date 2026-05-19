@@ -24,7 +24,7 @@ const Navbar = () => {
   const emailLink = socialLinks.find(l => l.platform.toLowerCase().includes('email'))?.url || 'rubypictures.ethiopia@gmail.com';
   const instagramLink = socialLinks.find(l => l.platform.toLowerCase().includes('instagram'))?.url || 'https://instagram.com/fitsum_beza';
   const telegramLink = socialLinks.find(l => l.platform.toLowerCase().includes('telegram'))?.url || 'https://t.me/iboy12';
-  const whatsappLink = socialLinks.find(l => l.platform.toLowerCase().includes('whatsapp'))?.url || 'https://wa.me/message/7NLOMAERSOSHF1';
+  const whatsappLink = socialLinks.find(l => l.platform.toLowerCase().includes('whatsapp'))?.url || 'https://wa.me/251921938039';
 
   return (
     <>

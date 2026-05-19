@@ -13,7 +13,7 @@ const Footer = () => {
   const emailLink = socialLinks.find(l => l.platform.toLowerCase().includes('email'))?.url || aboutPageContent?.contactEmail || 'rubypictures.ethiopia@gmail.com';
   const instagramLink = socialLinks.find(l => l.platform.toLowerCase().includes('instagram'))?.url || 'https://instagram.com/fitsum_beza';
   const telegramLink = socialLinks.find(l => l.platform.toLowerCase().includes('telegram'))?.url || 'https://t.me/ruby_pictures';
-  const whatsappLink = socialLinks.find(l => l.platform.toLowerCase().includes('whatsapp'))?.url || 'https://wa.me/251912345678';
+  const whatsappLink = socialLinks.find(l => l.platform.toLowerCase().includes('whatsapp'))?.url || 'https://wa.me/251921938039';
   const contactAddress = aboutPageContent?.contactAddress || 'Goro, Addis Ababa, Ethiopia';
 
   return (
