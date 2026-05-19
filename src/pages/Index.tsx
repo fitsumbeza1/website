@@ -33,14 +33,13 @@ const coffeeImages = [
 
 // Hero videos carousel content - DEFAULT fallback
 const heroSlidesDefault = [
- 
   {
     id: "hero-2",
-    videoUrl: "https://res.cloudinary.com/dhb7y3wk3/video/upload/v1770919216/0212_ax1hc5.mp4",
-    fallbackImage: coffeeImages[1],
-    title: "The Coffee Project",
+    videoUrl: "",
+    fallbackImage: "https://res.cloudinary.com/dcj3zekyw/image/upload/v1779229933/DSC05581_auuds9.jpg",
+    title: "Ruby Pictures",
     subtitle: "",
-    description: "Ethiopia's Finest Coffee Journey",
+    description: "Film Production Ethiopia",
   },
 ];
 
