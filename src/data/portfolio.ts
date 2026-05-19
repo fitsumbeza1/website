@@ -41,12 +41,6 @@ export const portfolioData: PortfolioCategory[] = [
     items: [{ id: "go-flick", title: "GO FLICK COMMERCIAL", videoUrl: "", description: "A dynamic commercial for a leading brand." }],
   },
   {
-    id: "tv-shows",
-    name: "TV-SHOWS",
-    description: "Television content that engages audiences.",
-    items: [{ id: "gude-fela", title: "GUDE FELA", videoUrl: "", description: "A TV show that brings culture to life.", coverImage: "https://res.cloudinary.com/dhb7y3wk3/image/upload/v1770910163/EBF56D8A-BD55-4195-8BF3-BC9F3327F57B_kakpt9.jpg" }],
-  },
-  {
     id: "music-videos",
     name: "MUSIC-VIDEOS",
     description: "Visual experiences that amplify the music.",
@@ -69,6 +63,12 @@ export const portfolioData: PortfolioCategory[] = [
       { id: "hasab", title: "HASAB", videoUrl: "https://www.youtube.com/watch?v=rTNkuSFQHBQ", description: "Calculated visuals with impact." },
       { id: "michuu", title: "MICHUU", videoUrl: "https://www.youtube.com/watch?v=AMNMOiH6t4w", description: "A story of resilience." },
     ],
+  },
+  {
+    id: "tv-shows",
+    name: "TV-SHOWS",
+    description: "Television content that engages audiences.",
+    items: [{ id: "gude-fela", title: "GUDE FELA", videoUrl: "", description: "A TV show that brings culture to life.", coverImage: "https://res.cloudinary.com/dhb7y3wk3/image/upload/v1770910163/EBF56D8A-BD55-4195-8BF3-BC9F3327F57B_kakpt9.jpg" }],
   },
   {
     id: "photos",
