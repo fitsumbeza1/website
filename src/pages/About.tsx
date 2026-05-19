@@ -647,23 +647,33 @@ const About = () => {
               <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tighter">Our Clients</h2>
             </motion.div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {clientsData.map((client) => (
                 <a
                   key={client._id}
                   href={client.website || '#'}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center p-4 grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-500"
+                  className="group block"
                 >
                   {client.logo ? (
-                    <img
-                      src={client.logo}
-                      alt={client.name}
-                      className="max-h-16 max-w-full object-contain"
-                    />
+                    <div className="relative aspect-video overflow-hidden bg-secondary/30 mb-4">
+                      <img
+                        src={client.logo}
+                        alt={client.name}
+                        className="w-full h-full object-cover object-center grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-500"
+                      />
+                    </div>
                   ) : (
-                    <span className="font-display text-xl font-bold">{client.name}</span>
+                    <div className="aspect-video bg-secondary/30 flex items-center justify-center mb-4">
+                      <span className="font-display text-2xl font-bold">{client.name}</span>
+                    </div>
+                  )}
+                  <h3 className="font-display text-lg font-bold tracking-tight group-hover:text-ruby transition-colors duration-300">
+                    {client.name}
+                  </h3>
+                  {client.description && (
+                    <p className="text-muted-foreground text-sm mt-1">{client.description}</p>
                   )}
                 </a>
               ))}
