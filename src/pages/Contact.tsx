@@ -15,8 +15,8 @@ const Contact = () => {
   const emailLink = socialLinks.find(l => l.platform.toLowerCase().includes('email'))?.url || aboutPageContent?.contactEmail || 'rubypictures.ethiopia@gmail.com';
   const instagramLink = socialLinks.find(l => l.platform.toLowerCase().includes('instagram'))?.url || 'https://instagram.com/ruby.pictures';
   const telegramLink = socialLinks.find(l => l.platform.toLowerCase().includes('telegram'))?.url || 'https://t.me/ruby_pictures';
-  const whatsappLink = socialLinks.find(l => l.platform.toLowerCase().includes('whatsapp'))?.url || 'https://wa.me/251912345678';
-  const contactPhone = aboutPageContent?.contactPhone || '+251 912 345 678';
+  const whatsappLink = socialLinks.find(l => l.platform.toLowerCase().includes('whatsapp'))?.url || 'https://wa.me/251921938039';
+  const contactPhone = aboutPageContent?.contactPhone || '+251 921 938 039';
   const contactAddress = aboutPageContent?.contactAddress || 'Goro, Addis Ababa, Ethiopia';
 
   const handleSubmit = async (e: React.FormEvent) => {
