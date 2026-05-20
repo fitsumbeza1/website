@@ -122,6 +122,18 @@ const defaultPortfolioItems: PortfolioItem[] = [
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
   },
+  {
+    _id: '9',
+    title: 'MARARTUU',
+    description: '',
+    videoUrl: 'https://youtu.be/F1cfzTGxcCs?si=l1Elwl8uPVpeVnTR',
+    coverImage: 'https://img.youtube.com/vi/F1cfzTGxcCs/maxresdefault.jpg',
+    category: 'music-videos',
+    priority: 7,
+    published: true,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
 ];
 
 const defaultTestimonials: Testimonial[] = [
