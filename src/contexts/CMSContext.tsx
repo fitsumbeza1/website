@@ -250,6 +250,18 @@ const defaultPortfolioItems: PortfolioItem[] = [
     updatedAt: new Date().toISOString(),
   },
   {
+    _id: '21',
+    title: 'SIRRAA TOLA',
+    description: '',
+    videoUrl: 'https://youtu.be/iruH02Byrrw?si=q_qxw9h-ITilRmD5',
+    coverImage: 'https://img.youtube.com/vi/iruH02Byrrw/maxresdefault.jpg',
+    category: 'music-videos',
+    priority: 18,
+    published: true,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+  {
     _id: '18',
     title: 'KANA JEDHIIN',
     description: '',
