@@ -110,6 +110,18 @@ const defaultPortfolioItems: PortfolioItem[] = [
     createdAt: new Date().toISOString(),
     updatedAt: new Date().toISOString(),
   },
+  {
+    _id: '8',
+    title: 'SAAMBEE',
+    description: '',
+    videoUrl: 'https://youtu.be/x-3hFZM-RmY?si=CdwkVvTW-QR-sBYC',
+    coverImage: 'https://img.youtube.com/vi/x-3hFZM-RmY/maxresdefault.jpg',
+    category: 'music-videos',
+    priority: 6,
+    published: true,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
 ];
 
 const defaultTestimonials: Testimonial[] = [
