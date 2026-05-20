@@ -351,10 +351,34 @@ const defaultTestimonials: Testimonial[] = [
 const defaultClients: Client[] = [
   {
     _id: '1',
+    name: 'Kerchanshe Group',
+    logo: 'https://kerchanshegroup.com/assets/images/images/logo-removebg-preview.png',
+    description: 'Coffee Export',
+    priority: 1,
+    createdAt: new Date().toISOString(),
+  },
+  {
+    _id: '2',
+    name: 'Cadceed Studio',
+    logo: 'https://cadceedonline.com/wp-content/uploads/2026/03/cropped-ChatGPT-Image-Mar-23-2026-06_21_33-AM-125x60.png',
+    description: 'Creative Studio',
+    priority: 2,
+    createdAt: new Date().toISOString(),
+  },
+  {
+    _id: '3',
+    name: 'Embrapa',
+    logo: 'https://images.seeklogo.com/logo-png/4/1/embrapa-logo-png_seeklogo-47364.png',
+    description: 'Agricultural Research',
+    priority: 3,
+    createdAt: new Date().toISOString(),
+  },
+  {
+    _id: '4',
     name: 'Drama Deluxe',
     logo: 'https://res.cloudinary.com/dhb7y3wk3/image/upload/v1770913625/photo_2026-02-12_19-04-15_vzzqno.jpg',
     description: 'Production House',
-    priority: 1,
+    priority: 4,
     createdAt: new Date().toISOString(),
   },
 ];

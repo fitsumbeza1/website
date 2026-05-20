@@ -40,7 +40,7 @@ const Footer = () => {
                   className="group flex flex-col items-center gap-3"
                 >
                   {client.logo ? (
-                    <div className="w-24 h-24 flex items-center justify-center overflow-hidden rounded-lg bg-secondary/30 p-3">
+                    <div className={`w-32 h-20 flex items-center justify-center overflow-hidden rounded-lg p-3 ${client.name === 'Cadceed Studio' ? 'bg-black' : 'bg-secondary/30'}`}>
                       <img
                         src={client.logo}
                         alt={client.name}
