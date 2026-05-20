@@ -32,7 +32,7 @@ export const portfolioData: PortfolioCategory[] = [
     name: "DOCUMENTARIES",
     description: "Real stories told with cinematic excellence.",
     items: [
-      { id: "dobo", title: "DOBO", videoUrl: "https://youtu.be/zexHLtFerjQ?si=esaOkqFdF559kWHo", description: "A documentary revealing hidden truths.", coverImage: "https://res.cloudinary.com/dhb7y3wk3/image/upload/v1771928350/dobo_1po_jbhe8m.jpg" },
+      { id: "dobo", title: "DOBO", videoUrl: "https://youtu.be/zexHLtFerjQ?si=esaOkqFdF559kWHo", description: "This documentary was filmed in the southern part of Ethiopia and premiered at the European Film Festival, with a special screening in Cannes, France. The project highlights powerful local stories, culture, and human experiences through cinematic storytelling.", coverImage: "https://res.cloudinary.com/dhb7y3wk3/image/upload/v1771928350/dobo_1po_jbhe8m.jpg" },
       { id: "kerchanse-coffee", title: "THE COFFEE PROJECT", videoUrl: "https://youtu.be/XOLherLZue8?si=x_Fkl72eVz2t7xQt", description: "A visual journey through the art of coffee.", coverImage: "https://res.cloudinary.com/dcj3zekyw/image/upload/f_auto,q_auto/IMG_2174_cdxjsh" },
       { id: "pharo-foundation", title: "PHARO FOUNDATION - SOMALILAND & ETHIOPIA", videoUrl: "https://youtu.be/_XH-CFEuTe4?si=FycK71BaC2G_j18n", description: "A selection of projects in Somaliland and Ethiopia. DOP: Fitsum Beza.", coverImage: "https://img.youtube.com/vi/_XH-CFEuTe4/maxresdefault.jpg" },
       { id: "national-palace", title: "NATIONAL PALACE", videoUrl: "https://youtu.be/uDvootlTA00?si=o5mfznm9UrcY_0Ew", description: "DOP: Fitsum Beza.", coverImage: "https://img.youtube.com/vi/uDvootlTA00/maxresdefault.jpg" },

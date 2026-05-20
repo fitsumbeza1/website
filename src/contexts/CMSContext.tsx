@@ -91,7 +91,7 @@ const defaultPortfolioItems: PortfolioItem[] = [
   {
     _id: '4',
     title: 'DOBO',
-    description: 'A documentary that steps into the everyday lives of those living on the margins — raw, unfiltered, and deeply human. DOBO is a portrait of resilience, shot with honesty and care in the streets and communities of Ethiopia.',
+    description: 'This documentary was filmed in the southern part of Ethiopia and premiered at the European Film Festival, with a special screening in Cannes, France. The project highlights powerful local stories, culture, and human experiences through cinematic storytelling.',
     videoUrl: 'https://youtu.be/zexHLtFerjQ?si=esaOkqFdF559kWHo',
     coverImage: 'https://res.cloudinary.com/dhb7y3wk3/image/upload/v1771928350/dobo_1po_jbhe8m.jpg',
     category: 'documentaries',
