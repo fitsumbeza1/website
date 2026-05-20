@@ -17,7 +17,7 @@ const CategoryPage = () => {
   const staticCategory = portfolioData.find((c) => c.id === categoryId);
   
   // Determine if this is a photo category
-  const isPhotoCategory = categoryId === 'photos' || staticCategory?.isPhoto || false;
+  const isPhotoCategory = categoryId === 'photos' || categoryId === 'coffee' || staticCategory?.isPhoto || false;
   
   // Use static category info, or create from categoryId
   const category = staticCategory || {

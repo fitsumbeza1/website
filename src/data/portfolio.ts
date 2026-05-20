@@ -79,9 +79,9 @@ export const portfolioData: PortfolioCategory[] = [
     items: [{ id: "gude-fela", title: "GUDE FELA", videoUrl: "", description: "A TV show that brings culture to life.", coverImage: "https://res.cloudinary.com/dhb7y3wk3/image/upload/v1770910163/EBF56D8A-BD55-4195-8BF3-BC9F3327F57B_kakpt9.jpg" }],
   },
   {
-    id: "photos",
-    name: "PHOTOS",
-    description: "Cinematic photography and visual storytelling.",
+    id: "coffee",
+    name: "THE COFFEE PROJECT",
+    description: "Cinematic photography and visual storytelling from The Coffee Project.",
     isPhoto: true,
     items: [
       { id: "photo-1", title: "The Coffee Project", description: "The Coffee Project", coverImage: "https://res.cloudinary.com/dhb7y3wk3/image/upload/v1771158040/IMG_2183_r3ooho.jpg", videoUrl: "https://youtu.be/XOLherLZue8?si=x_Fkl72eVz2t7xQt" },

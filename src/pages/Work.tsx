@@ -30,8 +30,8 @@ const categoryConfig: Record<string, { label: string; description: string; order
     description: 'Compelling content for the screen. Episodic and broadcast-ready work delivered with consistency and cinematic quality.',
     order: 5,
   },
-  'photos': {
-    label: 'PHOTOS',
+  'coffee': {
+    label: 'THE COFFEE PROJECT',
     description: 'Still frames that speak. Behind-the-scenes moments, portraits, and location photography from our productions.',
     order: 6,
   },
