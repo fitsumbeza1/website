@@ -4,7 +4,8 @@ import Layout from "@/components/Layout";
 import { useCMS } from "@/contexts/CMSContext";
 import { useToast } from "@/components/ui/use-toast";
 
-const RECIPIENT_EMAIL = "fitsumbeza1@gmail.com";
+// Get your free access key at https://web3forms.com — enter fitsumbeza1@gmail.com and paste the key here
+const WEB3FORMS_ACCESS_KEY = "a045bdca-a541-478b-a677-3d7d6ee14f8e";
 
 const Contact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", company: "", message: "" });
@@ -13,7 +14,6 @@ const Contact = () => {
   const { aboutProfile, aboutPageContent } = useCMS();
   const { toast } = useToast();
 
-  // Get social links and contact info from about profile
   const socialLinks = aboutProfile?.socialLinks || [];
   const emailLink = socialLinks.find(l => l.platform.toLowerCase().includes('email'))?.url || aboutPageContent?.contactEmail || 'fitsumbeza1@gmail.com';
   const instagramLink = socialLinks.find(l => l.platform.toLowerCase().includes('instagram'))?.url || 'https://instagram.com/fitsum_beza';
@@ -22,30 +22,36 @@ const Contact = () => {
   const contactPhone = aboutPageContent?.contactPhone || '+251 921 938 039';
   const contactAddress = aboutPageContent?.contactAddress || 'Goro, Addis Ababa, Ethiopia';
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-
-    const subject = encodeURIComponent(
-      `New message from ${formData.name}${formData.company ? ` (${formData.company})` : ''}`
-    );
-    const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company || 'N/A'}\n\nMessage:\n${formData.message}`
-    );
-    const mailtoUrl = `mailto:${RECIPIENT_EMAIL}?subject=${subject}&body=${body}`;
-
-    window.location.href = mailtoUrl;
-
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitted(true);
-      toast({
-        title: "Opening your email app...",
-        description: "Your message is ready to send to fitsumbeza1@gmail.com",
+    try {
+      const res = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `New message from ${formData.name}${formData.company ? ` (${formData.company})` : ''}`,
+          from_name: formData.name,
+          email: formData.email,
+          company: formData.company || "N/A",
+          message: formData.message,
+        }),
       });
-      setFormData({ name: "", email: "", company: "", message: "" });
-      setTimeout(() => setSubmitted(false), 5000);
-    }, 500);
+      const data = await res.json();
+      if (data.success) {
+        setSubmitted(true);
+        setFormData({ name: "", email: "", company: "", message: "" });
+        toast({ title: "Message sent!", description: "We'll get back to you soon." });
+        setTimeout(() => setSubmitted(false), 5000);
+      } else {
+        throw new Error(data.message);
+      }
+    } catch {
+      toast({ variant: "destructive", title: "Error", description: "Failed to send. Please email us directly at fitsumbeza1@gmail.com" });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -145,17 +151,11 @@ const Contact = () => {
             </div>
             <button
               type="submit"
-              disabled={isSubmitting}
+              disabled={isSubmitting || submitted}
               className="font-mono text-sm uppercase tracking-widest border border-foreground px-10 py-4 hover:bg-foreground hover:text-background transition-all duration-500 disabled:opacity-50"
             >
-              {isSubmitting ? "Opening Email..." : submitted ? "✓ Ready to Send" : "Send Message"}
+              {isSubmitting ? "Sending..." : submitted ? "✓ Message Sent!" : "Send Message"}
             </button>
-            {submitted && (
-              <p className="font-mono text-xs text-muted-foreground">
-                Your email app should have opened. If not, email us directly at{" "}
-                <a href="mailto:fitsumbeza1@gmail.com" className="text-ruby underline">fitsumbeza1@gmail.com</a>
-              </p>
-            )}
           </motion.form>
 
           <motion.div
