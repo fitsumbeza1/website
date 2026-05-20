@@ -22,6 +22,7 @@ export const portfolioData: PortfolioCategory[] = [
     description: "Feature films and short films that tell compelling stories.",
     items: [
       { id: "joka-27", title: "JOKA 27", videoUrl: "", description: "An intense drama that challenges perceptions.", coverImage: "https://res.cloudinary.com/dhb7y3wk3/image/upload/v1770910160/joka_new_poster_rasso3.jpg" },
+      { id: "pastor-alex", title: "PASTOR ALEX", videoUrl: "", description: "Shot in Kenya Cinema. Produced by Ruby Pictures & Embeast Production.", coverImage: "https://res.cloudinary.com/dcj3zekyw/image/upload/q_auto/f_auto/v1779279325/photo_2026-05-20_15.14.16_eupd7i.jpg" },
       { id: "beheg-amlak", title: "BEHEG AMLAK", videoUrl: "https://youtu.be/NNgEk647Qy4?si=fRZUe3U-IW-Vg4k2", description: "Ethiopian full length film.", coverImage: "https://img.youtube.com/vi/NNgEk647Qy4/maxresdefault.jpg" },
       { id: "balem", title: "BALEM", videoUrl: "https://youtu.be/43yZ27SdVUw?si=eoAP4l1uU9iSVby-", description: "A gripping story exploring the depths of human emotion.", coverImage: "https://img.youtube.com/vi/43yZ27SdVUw/maxresdefault.jpg" },
     ],
