@@ -23,7 +23,7 @@ export const portfolioData: PortfolioCategory[] = [
     items: [
       { id: "joka-27", title: "JOKA 27", videoUrl: "", description: "An intense drama that challenges perceptions.", coverImage: "https://res.cloudinary.com/dhb7y3wk3/image/upload/v1770910160/joka_new_poster_rasso3.jpg" },
       { id: "beheg-amlak", title: "BEHEG AMLAK", videoUrl: "https://youtu.be/NNgEk647Qy4?si=fRZUe3U-IW-Vg4k2", description: "Ethiopian full length film.", coverImage: "https://img.youtube.com/vi/NNgEk647Qy4/maxresdefault.jpg" },
-      { id: "balem", title: "BALEM", videoUrl: "", description: "A gripping story exploring the depths of human emotion." },
+      { id: "balem", title: "BALEM", videoUrl: "https://youtu.be/43yZ27SdVUw?si=eoAP4l1uU9iSVby-", description: "A gripping story exploring the depths of human emotion.", coverImage: "https://img.youtube.com/vi/43yZ27SdVUw/maxresdefault.jpg" },
     ],
   },
   {
