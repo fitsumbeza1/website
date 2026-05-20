@@ -286,6 +286,18 @@ const defaultPortfolioItems: PortfolioItem[] = [
     updatedAt: new Date().toISOString(),
   },
   {
+    _id: '23',
+    title: 'MICHUU',
+    description: '',
+    videoUrl: 'https://youtu.be/AMNMOiH6t4w?si=yq4yY2cVkBdREBIA',
+    coverImage: 'https://img.youtube.com/vi/AMNMOiH6t4w/maxresdefault.jpg',
+    category: 'music-videos',
+    priority: 19,
+    published: true,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+  {
     _id: '9',
     title: 'MARARTUU',
     description: '',
