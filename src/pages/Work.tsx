@@ -101,7 +101,7 @@ const Work = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5 }}
                 >
-                  <Link to={`/work/${first.category}/${first._id}`} className="group block">
+                  <a href={first.videoUrl || '#'} target="_blank" rel="noopener noreferrer" className="group block">
                     <div className="relative aspect-[4/5] overflow-hidden mb-4">
                       <img
                         src={first.coverImage}
@@ -118,7 +118,7 @@ const Work = () => {
                     <p className="text-muted-foreground text-sm mt-1 leading-relaxed line-clamp-2">
                       {first.description}
                     </p>
-                  </Link>
+                  </a>
                 </motion.div>
 
                 {/* DOBO and other portrait posters — 2:3 natural ratio */}
@@ -129,7 +129,7 @@ const Work = () => {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5, delay: (i + 1) * 0.12 }}
                   >
-                    <Link to={`/work/${item.category}/${item._id}`} className="group block">
+                    <a href={item.videoUrl || '#'} target="_blank" rel="noopener noreferrer" className="group block">
                       <div className="relative aspect-[2/3] overflow-hidden mb-4">
                         <img
                           src={item.coverImage}
@@ -146,7 +146,7 @@ const Work = () => {
                       <p className="text-muted-foreground text-sm mt-1 leading-relaxed line-clamp-2">
                         {item.description}
                       </p>
-                    </Link>
+                    </a>
                   </motion.div>
                 ))}
               </div>

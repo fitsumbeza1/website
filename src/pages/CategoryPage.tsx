@@ -28,9 +28,10 @@ const CategoryPage = () => {
     isPhoto: false
   };
 
-  // Combine CMS items with static items if CMS is empty
-  const items = cmsItems.length > 0 
-    ? cmsItems.map(item => ({
+  // Use static items if available (most up to date), fallback to CMS items
+  const items = staticCategory?.items && staticCategory.items.length > 0
+    ? staticCategory.items
+    : cmsItems.map(item => ({
         id: item._id,
         title: item.title,
         coverImage: item.coverImage,
@@ -38,8 +39,7 @@ const CategoryPage = () => {
         images: item.images,
         objectFit: (item as any).objectFit || 'cover',
         orientation: (item as any).orientation || 'landscape',
-      }))
-    : staticCategory?.items || [];
+      }));
 
   // Helper function to get image style based on display options
   const getImageStyle = (item: any) => {
