@@ -105,7 +105,7 @@ const CategoryPage = () => {
         </div>
 
         {/* Video Grid with Cover Images */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-16">
+        <div className={`grid gap-10 mt-16 ${categoryId === 'movies' ? 'grid-cols-2 md:grid-cols-4' : 'grid-cols-1 md:grid-cols-2'}`}>
           {items.map((item, index) => (
             <motion.div
               key={item.id}
@@ -119,16 +119,16 @@ const CategoryPage = () => {
                 rel="noopener noreferrer"
                 className="group block"
               >
-                <div className={`relative aspect-video w-full bg-muted overflow-hidden mb-4`}>
-                  {item.videoUrl ? (
-                    <img
-                      src={getYouTubeThumbnailUrl(item.videoUrl)}
-                      alt={item.title}
-                      className={`w-full h-full ${getImageStyle(item).objectFitClass} grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105`}
-                    />
-                  ) : item.coverImage ? (
+                <div className={`relative w-full bg-muted overflow-hidden mb-4 ${categoryId === 'movies' ? 'aspect-[2/3]' : 'aspect-video'}`}>
+                  {item.coverImage ? (
                     <img
                       src={item.coverImage}
+                      alt={item.title}
+                      className={`w-full h-full ${categoryId === 'movies' ? 'object-cover' : getImageStyle(item).objectFitClass} grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105`}
+                    />
+                  ) : item.videoUrl ? (
+                    <img
+                      src={getYouTubeThumbnailUrl(item.videoUrl)}
                       alt={item.title}
                       className={`w-full h-full ${getImageStyle(item).objectFitClass} grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105`}
                     />
@@ -145,12 +145,12 @@ const CategoryPage = () => {
                   )}
                   {/* Play overlay only for videos */}
                   {item.videoUrl && (
-                    <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                      <Play className="w-16 h-16 text-white" />
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <Play className="w-12 h-12 text-white" />
                     </div>
                   )}
                 </div>
-                <h3 className="font-display text-2xl font-bold tracking-tight group-hover:text-ruby transition-colors duration-500">
+                <h3 className={`font-display font-bold tracking-tight group-hover:text-ruby transition-colors duration-500 ${categoryId === 'movies' ? 'text-sm' : 'text-2xl'}`}>
                   {item.title}
                 </h3>
               </a>
