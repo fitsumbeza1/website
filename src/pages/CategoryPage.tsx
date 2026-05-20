@@ -113,11 +113,13 @@ const CategoryPage = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.05 }}
             >
-              <Link
-                to={`/work/${categoryId}/${item.id}`}
+              <a
+                href={item.videoUrl || '#'}
+                target={item.videoUrl ? '_blank' : '_self'}
+                rel="noopener noreferrer"
                 className="group block"
               >
-                <div className={`relative ${isPhotoCategory ? 'aspect-video' : 'aspect-video'} w-full bg-muted overflow-hidden mb-4`}>
+                <div className={`relative aspect-video w-full bg-muted overflow-hidden mb-4`}>
                   {item.videoUrl ? (
                     <img
                       src={getYouTubeThumbnailUrl(item.videoUrl)}
@@ -151,7 +153,7 @@ const CategoryPage = () => {
                 <h3 className="font-display text-2xl font-bold tracking-tight group-hover:text-ruby transition-colors duration-500">
                   {item.title}
                 </h3>
-              </Link>
+              </a>
             </motion.div>
           ))}
         </div>
