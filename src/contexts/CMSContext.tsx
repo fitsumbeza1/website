@@ -39,6 +39,18 @@ const defaultPortfolioItems: PortfolioItem[] = [
     updatedAt: new Date().toISOString(),
   },
   {
+    _id: '10',
+    title: 'VISIT OROMIA-BORENA',
+    description: 'A cinematic journey through the breathtaking landscapes and culture of Oromia-Borena.',
+    videoUrl: 'https://youtu.be/agCiBLPmgjo?si=JS-fW62fG0Z8NrN3',
+    coverImage: 'https://img.youtube.com/vi/agCiBLPmgjo/maxresdefault.jpg',
+    category: 'documentaries',
+    priority: 1,
+    published: true,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+  {
     _id: '4',
     title: 'DOBO',
     description: 'A documentary that steps into the everyday lives of those living on the margins — raw, unfiltered, and deeply human. DOBO is a portrait of resilience, shot with honesty and care in the streets and communities of Ethiopia.',
