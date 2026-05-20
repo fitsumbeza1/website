@@ -11,7 +11,7 @@ const logoUrl = "https://res.cloudinary.com/dhb7y3wk3/image/upload/v1770913043/r
 
 // Default fallback photos
 const defaultRubyPhotos = [
-  "https://res.cloudinary.com/dcj3zekyw/image/upload/v1779229933/DSC05581_auuds9.jpg",
+  "https://res.cloudinary.com/dcj3zekyw/image/upload/q_auto/f_auto/v1779229933/DSC05581_auuds9.jpg",
   "https://res.cloudinary.com/dcj3zekyw/image/upload/q_auto/f_auto/v1779129094/IMG_4817_mgw5fo.png",
   "https://res.cloudinary.com/dhb7y3wk3/image/upload/v1772249801/IMG_4236_lpvxsk.jpg",
   "https://res.cloudinary.com/dhb7y3wk3/image/upload/v1772249801/IMG_4237_wvodrh.jpg",
@@ -36,7 +36,7 @@ const heroSlidesDefault = [
   {
     id: "hero-2",
     videoUrl: "",
-    fallbackImage: "https://res.cloudinary.com/dcj3zekyw/image/upload/v1779229933/DSC05581_auuds9.jpg",
+    fallbackImage: "https://res.cloudinary.com/dcj3zekyw/image/upload/q_auto/f_auto/v1779229933/DSC05581_auuds9.jpg",
     title: "Ruby Pictures",
     subtitle: "",
     description: "Film Production Ethiopia",
