@@ -225,6 +225,18 @@ const defaultPortfolioItems: PortfolioItem[] = [
     updatedAt: new Date().toISOString(),
   },
   {
+    _id: '19',
+    title: 'INSTRUMENTAL',
+    description: '',
+    videoUrl: 'https://youtu.be/BuViNxURvTg?si=6yI2DQYE27cmJR_E',
+    coverImage: 'https://img.youtube.com/vi/BuViNxURvTg/maxresdefault.jpg',
+    category: 'music-videos',
+    priority: 16,
+    published: true,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+  {
     _id: '18',
     title: 'KANA JEDHIIN',
     description: '',
