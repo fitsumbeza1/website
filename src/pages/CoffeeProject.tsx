@@ -168,12 +168,19 @@ const CoffeeProject = () => {
                   i === 0 ? "md:col-span-2 lg:col-span-2 aspect-[16/9]" : ""
                 }`}
               >
-                <LazyImage
-                  src={image}
-                  alt={`Coffee project photo ${i + 1}`}
-                  aspectRatio={i === 0 ? "aspect-[16/9]" : "aspect-[3/4]"}
-                  className="grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105"
-                />
+                <a
+                  href="https://youtu.be/XOLherLZue8?si=x_Fkl72eVz2t7xQt"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full h-full"
+                >
+                  <LazyImage
+                    src={image}
+                    alt={`Coffee project photo ${i + 1}`}
+                    aspectRatio={i === 0 ? "aspect-[16/9]" : "aspect-[3/4]"}
+                    className="grayscale hover:grayscale-0 transition-all duration-700 hover:scale-105"
+                  />
+                </a>
               </motion.div>
             ))}
           </div>
