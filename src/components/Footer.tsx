@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import { useTheme } from "@/contexts/ThemeContext";
 import { useCMS } from "@/contexts/CMSContext";
 
@@ -6,7 +7,8 @@ const logoUrl = "https://res.cloudinary.com/dhb7y3wk3/image/upload/v1770913043/r
 
 const Footer = () => {
   const { theme } = useTheme();
-  const { aboutProfile, aboutPageContent } = useCMS();
+  const { aboutProfile, aboutPageContent, getClients } = useCMS();
+  const clientsData = getClients();
   
   // Get social links from about profile
   const socialLinks = aboutProfile?.socialLinks || [];
@@ -17,7 +19,50 @@ const Footer = () => {
   const contactAddress = aboutPageContent?.contactAddress || 'Goro, Addis Ababa, Ethiopia';
 
   return (
-    <footer className="border-t border-border px-6 md:px-12 py-16">
+    <footer className="border-t border-border">
+      {/* Clients Section */}
+      {clientsData.length > 0 && (
+        <div className="px-6 md:px-12 py-20 border-b border-border">
+          <div className="max-w-7xl mx-auto">
+            <p className="font-mono text-xs uppercase tracking-[0.3em] text-muted-foreground mb-3">Trusted By</p>
+            <h2 className="font-display text-3xl md:text-4xl font-bold tracking-tighter mb-12">Our Clients</h2>
+            <div className="flex flex-wrap gap-10 items-center">
+              {clientsData.map((client, i) => (
+                <motion.a
+                  key={client._id}
+                  href={client.website || '#'}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.08 }}
+                  className="group flex flex-col items-center gap-3"
+                >
+                  {client.logo ? (
+                    <div className="w-24 h-24 flex items-center justify-center overflow-hidden rounded-lg bg-secondary/30 p-3">
+                      <img
+                        src={client.logo}
+                        alt={client.name}
+                        className="w-full h-full object-contain grayscale group-hover:grayscale-0 transition-all duration-500"
+                      />
+                    </div>
+                  ) : (
+                    <span className="font-display text-xl font-bold text-muted-foreground group-hover:text-foreground transition-colors">
+                      {client.name}
+                    </span>
+                  )}
+                  <span className="font-mono text-xs uppercase tracking-widest text-muted-foreground group-hover:text-foreground transition-colors">
+                    {client.name}
+                  </span>
+                </motion.a>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      <div className="px-6 md:px-12 py-16">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
           <div>
@@ -105,6 +150,7 @@ const Footer = () => {
             {contactAddress}
           </p>
         </div>
+      </div>
       </div>
     </footer>
   );
