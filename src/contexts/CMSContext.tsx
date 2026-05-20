@@ -378,7 +378,7 @@ const defaultHeroSlides: HeroSlide[] = [
     _id: '1',
     title: 'Ruby Pictures',
     description: 'Film Production Ethiopia',
-    fallbackImage: 'https://res.cloudinary.com/dhb7y3wk3/image/upload/v1770910845/DSC06232_rsv8sv.jpg',
+    fallbackImage: 'https://res.cloudinary.com/dcj3zekyw/image/upload/q_auto/f_auto/v1779229933/DSC05581_auuds9.jpg',
     priority: 1,
     published: true,
     createdAt: new Date().toISOString(),
