@@ -51,6 +51,18 @@ const defaultPortfolioItems: PortfolioItem[] = [
     updatedAt: new Date().toISOString(),
   },
   {
+    _id: '22',
+    title: 'BEYNOUNA VILLAGE - ETHIOPIA',
+    description: 'A documentary capturing the beauty and life of Beynouna Village in Ethiopia. Director of Photography: Fitsum Beza.',
+    videoUrl: 'https://youtu.be/4z-by0jVjYo?si=qCxVffK7LxoLnmi2',
+    coverImage: 'https://img.youtube.com/vi/4z-by0jVjYo/maxresdefault.jpg',
+    category: 'documentaries',
+    priority: 4,
+    published: true,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  },
+  {
     _id: '4',
     title: 'DOBO',
     description: 'A documentary that steps into the everyday lives of those living on the margins — raw, unfiltered, and deeply human. DOBO is a portrait of resilience, shot with honesty and care in the streets and communities of Ethiopia.',
