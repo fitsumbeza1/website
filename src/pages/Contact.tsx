@@ -53,6 +53,44 @@ const Contact = () => {
             Let's create<br />
             <span className="text-gradient-ruby">together</span>
           </h1>
+
+          {/* Contact Info below heading */}
+          <div className="flex flex-wrap gap-8 mt-8">
+            <div className="flex items-center gap-3">
+              <span className="font-mono text-xs uppercase tracking-widest text-muted-foreground">Phone</span>
+              <a href="https://wa.me/251921938039" className="text-foreground hover:text-ruby transition-colors font-medium">
+                +251 921 938 039
+              </a>
+            </div>
+            <div className="flex items-center gap-3">
+              <span className="font-mono text-xs uppercase tracking-widest text-muted-foreground">Email</span>
+              <a href="mailto:fitsumbeza1@gmail.com" className="text-foreground hover:text-ruby transition-colors font-medium">
+                fitsumbeza1@gmail.com
+              </a>
+            </div>
+            <div className="flex items-center gap-3">
+              <span className="font-mono text-xs uppercase tracking-widest text-muted-foreground">Studio</span>
+              <span className="text-foreground font-medium">Goro, Addis Ababa, Ethiopia</span>
+            </div>
+            <div className="flex items-center gap-3">
+              <span className="font-mono text-xs uppercase tracking-widest text-muted-foreground">Instagram</span>
+              <a href="https://instagram.com/fitsum_beza" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-ruby transition-colors font-medium">
+                @fitsum_beza
+              </a>
+            </div>
+            <div className="flex items-center gap-3">
+              <span className="font-mono text-xs uppercase tracking-widest text-muted-foreground">Telegram</span>
+              <a href="https://t.me/iboy12" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-ruby transition-colors font-medium">
+                @iboy12
+              </a>
+            </div>
+            <div className="flex items-center gap-3">
+              <span className="font-mono text-xs uppercase tracking-widest text-muted-foreground">YouTube</span>
+              <a href="https://www.youtube.com/@Ruby_Pictures" target="_blank" rel="noopener noreferrer" className="text-foreground hover:text-ruby transition-colors font-medium">
+                @Ruby_Pictures
+              </a>
+            </div>
+          </div>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mt-16">
