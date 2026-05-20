@@ -4,12 +4,15 @@ import Layout from "@/components/Layout";
 import { useCMS } from "@/contexts/CMSContext";
 import { useToast } from "@/components/ui/use-toast";
 
+const RECIPIENT_EMAIL = "fitsumbeza1@gmail.com";
+
 const Contact = () => {
   const [formData, setFormData] = useState({ name: "", email: "", company: "", message: "" });
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const { aboutProfile, aboutPageContent, createMessage } = useCMS();
+  const [submitted, setSubmitted] = useState(false);
+  const { aboutProfile, aboutPageContent } = useCMS();
   const { toast } = useToast();
-  
+
   // Get social links and contact info from about profile
   const socialLinks = aboutProfile?.socialLinks || [];
   const emailLink = socialLinks.find(l => l.platform.toLowerCase().includes('email'))?.url || aboutPageContent?.contactEmail || 'fitsumbeza1@gmail.com';
@@ -19,25 +22,30 @@ const Contact = () => {
   const contactPhone = aboutPageContent?.contactPhone || '+251 921 938 039';
   const contactAddress = aboutPageContent?.contactAddress || 'Goro, Addis Ababa, Ethiopia';
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    try {
-      await createMessage(formData);
+
+    const subject = encodeURIComponent(
+      `New message from ${formData.name}${formData.company ? ` (${formData.company})` : ''}`
+    );
+    const body = encodeURIComponent(
+      `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company || 'N/A'}\n\nMessage:\n${formData.message}`
+    );
+    const mailtoUrl = `mailto:${RECIPIENT_EMAIL}?subject=${subject}&body=${body}`;
+
+    window.location.href = mailtoUrl;
+
+    setTimeout(() => {
+      setIsSubmitting(false);
+      setSubmitted(true);
       toast({
-        title: "Message sent!",
-        description: "Thank you for reaching out. We'll get back to you soon.",
+        title: "Opening your email app...",
+        description: "Your message is ready to send to fitsumbeza1@gmail.com",
       });
       setFormData({ name: "", email: "", company: "", message: "" });
-    } catch (error) {
-      toast({
-        variant: "destructive",
-        title: "Error",
-        description: "Failed to send message. Please try again.",
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
+      setTimeout(() => setSubmitted(false), 5000);
+    }, 500);
   };
 
   return (
@@ -140,8 +148,14 @@ const Contact = () => {
               disabled={isSubmitting}
               className="font-mono text-sm uppercase tracking-widest border border-foreground px-10 py-4 hover:bg-foreground hover:text-background transition-all duration-500 disabled:opacity-50"
             >
-              {isSubmitting ? "Sending..." : "Send Message"}
+              {isSubmitting ? "Opening Email..." : submitted ? "✓ Ready to Send" : "Send Message"}
             </button>
+            {submitted && (
+              <p className="font-mono text-xs text-muted-foreground">
+                Your email app should have opened. If not, email us directly at{" "}
+                <a href="mailto:fitsumbeza1@gmail.com" className="text-ruby underline">fitsumbeza1@gmail.com</a>
+              </p>
+            )}
           </motion.form>
 
           <motion.div
