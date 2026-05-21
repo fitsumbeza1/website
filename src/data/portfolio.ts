@@ -67,6 +67,7 @@ export const portfolioData: PortfolioCategory[] = [
       { id: "gadaa-malee", title: "GADAA MALEE", videoUrl: "https://youtu.be/XsqGg9ia4xU?si=hoTmJQt5vUGiMAPu", description: "", coverImage: "https://img.youtube.com/vi/XsqGg9ia4xU/maxresdefault.jpg" },
       { id: "harar", title: "HARAR", videoUrl: "https://youtu.be/jEg4ZotZoEs?si=55a1O9Bcl0kvwzfo", description: "", coverImage: "https://img.youtube.com/vi/jEg4ZotZoEs/maxresdefault.jpg" },
       { id: "saambee", title: "SAAMBEE", videoUrl: "https://youtu.be/x-3hFZM-RmY?si=CdwkVvTW-QR-sBYC", description: "", coverImage: "https://img.youtube.com/vi/x-3hFZM-RmY/maxresdefault.jpg" },
+      { id: "lolly-pop", title: "LOLLY POP", videoUrl: "https://youtu.be/wVVDoQYcGjs?si=3R-K03G76SkVWgd3", description: "", coverImage: "https://img.youtube.com/vi/wVVDoQYcGjs/maxresdefault.jpg" },
       { id: "kana-jedhiin", title: "KANA JEDHIIN", videoUrl: "https://youtu.be/seL68zV1wWk?si=Dom1vJyaQI6KOdoN", description: "", coverImage: "https://img.youtube.com/vi/seL68zV1wWk/maxresdefault.jpg" },
       { id: "instrumental", title: "INSTRUMENTAL", videoUrl: "https://youtu.be/BuViNxURvTg?si=6yI2DQYE27cmJR_E", description: "", coverImage: "https://img.youtube.com/vi/BuViNxURvTg/maxresdefault.jpg" },
       { id: "sirraa-tola", title: "SIRRAA TOLA", videoUrl: "https://youtu.be/iruH02Byrrw?si=q_qxw9h-ITilRmD5", description: "", coverImage: "https://img.youtube.com/vi/iruH02Byrrw/maxresdefault.jpg" },
