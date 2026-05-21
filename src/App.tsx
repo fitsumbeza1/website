@@ -16,6 +16,7 @@ import CategoryPage from "./pages/CategoryPage";
 import VideoDetail from "./pages/VideoDetail";
 import PhotosPage from "./pages/PhotosPage";
 import CoffeeProject from "./pages/CoffeeProject";
+import Gallery from "./pages/Gallery";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -47,6 +48,7 @@ const AnimatedRoutes = () => {
         <Route path="/work/:categoryId/:videoId" element={<VideoDetail />} />
         <Route path="/photos" element={<PhotosPage />} />
         <Route path="/work/coffee" element={<CoffeeProject />} />
+        <Route path="/gallery" element={<Gallery />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
