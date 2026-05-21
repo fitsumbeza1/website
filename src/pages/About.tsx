@@ -403,7 +403,7 @@ const About = () => {
                     ))}
                   </div>
                 ) : (
-                  <p>Ruby Pictures is a dynamic film production company dedicated to crafting compelling visual stories that resonate with audiences worldwide.</p>
+                  <p>Ruby Pictures is more than a film production company — we are storytellers shaping emotion into cinema. Like a ruby, every frame we create is rare, bold, and timeless. Rooted in the heart of Ethiopia, we craft cinematic experiences that connect deeply with audiences around the world. Fueled by passion and favored by GOD, our team transforms ideas into powerful visual stories through world-class filmmaking, stunning cinematography, and authentic creativity. From documentaries and music videos to commercials and films, we bring visions to life with soul, beauty, and purpose.</p>
                 )}
               </motion.div>
             </div>
@@ -445,7 +445,7 @@ const About = () => {
                     ))}
                   </div>
                 ) : (
-                  <p>Ruby Pictures is a dynamic film production company dedicated to crafting compelling visual stories that resonate with audiences worldwide.</p>
+                  <p>Ruby Pictures is more than a film production company — we are storytellers shaping emotion into cinema. Like a ruby, every frame we create is rare, bold, and timeless. Rooted in the heart of Ethiopia, we craft cinematic experiences that connect deeply with audiences around the world. Fueled by passion and favored by GOD, our team transforms ideas into powerful visual stories through world-class filmmaking, stunning cinematography, and authentic creativity. From documentaries and music videos to commercials and films, we bring visions to life with soul, beauty, and purpose.</p>
                 )}
               </div>
             </motion.div>
