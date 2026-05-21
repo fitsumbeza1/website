@@ -99,24 +99,22 @@ const CoffeeProject = () => {
       {/* Hero with Video */}
       <section className="relative h-[60vh] flex items-end overflow-hidden">
         <div className="absolute inset-0 overflow-hidden">
-          {!videoLoaded && (
-            <>
-              <img
-                src={randomImage}
-                alt="Hero background"
-                className="w-full h-full object-cover scale-150"
-              />
-              <div className="absolute inset-0 bg-black/80" />
-            </>
-          )}
+          {/* Always visible fallback image */}
+          <img
+            src={randomImage}
+            alt="Hero background"
+            className="w-full h-full object-cover scale-150"
+          />
+          <div className="absolute inset-0 bg-black/70" />
+          {/* Video fades in on top when ready */}
           <video
             autoPlay
             muted
             loop
             playsInline
-            className={`w-full h-full object-cover absolute inset-0 scale-150 ${videoLoaded ? 'opacity-100' : 'opacity-0'}`}
+            className={`w-full h-full object-cover absolute inset-0 scale-150 transition-opacity duration-1000 ${videoLoaded ? 'opacity-100' : 'opacity-0'}`}
             onLoadedData={handleVideoLoad}
-            onError={handleVideoError}
+            onError={() => {}}
           >
             <source src={heroVideoUrl} type="video/mp4" />
           </video>
