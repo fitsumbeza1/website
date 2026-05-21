@@ -1,3 +1,16 @@
+// Handle GitHub Pages SPA redirect — runs before React/Router initializes
+// so BrowserRouter picks up the correct URL on first render
+(function () {
+  const redirect = sessionStorage.redirect;
+  if (redirect) {
+    delete sessionStorage.redirect;
+    try {
+      const url = new URL(redirect);
+      window.history.replaceState(null, "", url.pathname + url.search + url.hash);
+    } catch (_) {}
+  }
+})();
+
 import { useState, useEffect } from "react";
 import { useLocation, Routes, Route } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
