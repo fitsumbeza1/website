@@ -299,7 +299,7 @@ const Index = () => {
             />
             </div>
             {/* Main tagline */}
-            <p className="font-display text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-3 leading-tight max-w-3xl mx-auto uppercase" style={{ fontStyle: 'italic', textShadow: '0 2px 20px rgba(0,0,0,0.5)' }}>
+            <p className="font-display text-lg md:text-2xl lg:text-3xl font-bold text-white mb-3 leading-tight max-w-3xl mx-auto uppercase" style={{ fontStyle: 'italic', textShadow: '0 2px 20px rgba(0,0,0,0.5)' }}>
               FAVORED BY GOD, DRIVEN BY VISION —<br className="hidden md:block" /> TURNING STORIES INTO TIMELESS CINEMA.
             </p>
             <p className="font-mono text-sm md:text-base uppercase tracking-[0.25em] text-gray-300 mb-8 max-w-2xl mx-auto">
