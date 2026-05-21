@@ -455,7 +455,7 @@ const defaultFeaturedSections: FeaturedSection[] = [];
 const defaultAboutPageContent: AboutPageContent = {
   _id: '1',
   aboutTitle: 'About Us',
-  aboutContent: 'Ruby Pictures is a dynamic film production company dedicated to crafting compelling visual stories that resonate with audiences worldwide. Based in the heart of Africa, we bring a unique perspective to every project we undertake.\n\nOur team of passionate filmmakers, cinematographers, and creative professionals work collaboratively to transform ideas into captivating visual experiences. From concept development to final delivery, we maintain the highest standards of quality and creativity.',
+  aboutContent: 'Ruby Pictures is more than a film production company — we are storytellers shaping emotion into cinema. Like a ruby, every frame we create is rare, bold, and timeless. Rooted in the heart of Ethiopia, we craft cinematic experiences that connect deeply with audiences around the world.\n\nFueled by passion and favored by GOD, our team transforms ideas into powerful visual stories through world-class filmmaking, stunning cinematography, and authentic creativity. From documentaries and music videos to commercials and films, we bring visions to life with soul, beauty, and purpose.',
   aboutImage: 'https://res.cloudinary.com/dhb7y3wk3/image/upload/v1770913644/IMG_4139_cypqb0.jpg',
   ceoName: 'Fitsum Beza',
   ceoTitle: 'Founder & CEO',
