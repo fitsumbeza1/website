@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useLocation, Routes, Route, useNavigate } from "react-router-dom";
+import { useLocation, Routes, Route } from "react-router-dom";
 import { AnimatePresence } from "framer-motion";
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
@@ -36,19 +36,6 @@ const ScrollToTop = () => {
   return null;
 };
 
-const GHPagesRedirect = () => {
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    const redirect = sessionStorage.getItem("redirectPath");
-    if (redirect) {
-      sessionStorage.removeItem("redirectPath");
-      navigate(redirect, { replace: true });
-    }
-  }, [navigate]);
-
-  return null;
-};
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -108,7 +95,6 @@ const App = () => {
               <BrowserRouter basename={window.location.hostname === 'fitsumbeza1.github.io' ? '/website' : '/'}>
 
                 <ScrollToTop />
-                <GHPagesRedirect />
                 <AnimatePresence mode="wait">
                   {isLoading ? (
                     <LoadingScreen key="loading" onComplete={handleLoadingComplete} />
