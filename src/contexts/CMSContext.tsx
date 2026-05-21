@@ -400,7 +400,7 @@ const defaultClients: Client[] = [
   {
     _id: '5',
     name: 'LENDAZ',
-    logo: '',
+    logo: 'https://res.cloudinary.com/dcj3zekyw/image/upload/q_auto/f_auto/v1779355544/IMG_4897_bhgfjv.jpg',
     description: 'Brand',
     priority: 7,
     createdAt: new Date().toISOString(),
