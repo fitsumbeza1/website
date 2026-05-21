@@ -58,6 +58,7 @@ export const portfolioData: PortfolioCategory[] = [
       { id: "marartuu", title: "MARARTUU", videoUrl: "https://youtu.be/F1cfzTGxcCs?si=l1Elwl8uPVpeVnTR", description: "", coverImage: "https://img.youtube.com/vi/F1cfzTGxcCs/maxresdefault.jpg" },
       { id: "call-me", title: "CALL ME", videoUrl: "https://youtu.be/cEYTjwhcNNc?si=i1FtOPw5mez_eUCq", description: "", coverImage: "https://img.youtube.com/vi/cEYTjwhcNNc/maxresdefault.jpg" },
       { id: "mimi", title: "MIMI", videoUrl: "https://youtu.be/bgDcrroWK5Q?si=BnVO3N57BiGvqhjc", description: "", coverImage: "https://img.youtube.com/vi/bgDcrroWK5Q/maxresdefault.jpg" },
+      { id: "rajo", title: "RAJO", videoUrl: "https://youtu.be/7RODh-jg8o8?si=rvFGblir6CYnjwYU", description: "", coverImage: "https://img.youtube.com/vi/7RODh-jg8o8/maxresdefault.jpg" },
       { id: "amartii-koo", title: "AMARTII KOO", videoUrl: "https://youtu.be/ect8QI3hPP8?si=EbwIdrQwd50d2Rol", description: "", coverImage: "https://img.youtube.com/vi/ect8QI3hPP8/maxresdefault.jpg" },
       { id: "darroo", title: "DARROO", videoUrl: "https://youtu.be/t5yMzJeos9s?si=bhsmCWLYSJAZSvaA", description: "", coverImage: "https://img.youtube.com/vi/t5yMzJeos9s/maxresdefault.jpg" },
       { id: "shonkooree", title: "SHONKOOREE", videoUrl: "https://youtu.be/ozr2Pn7MB0s?si=xAsYl9hd8NvzpeSK", description: "", coverImage: "https://img.youtube.com/vi/ozr2Pn7MB0s/maxresdefault.jpg" },
