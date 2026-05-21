@@ -381,6 +381,30 @@ const defaultClients: Client[] = [
     priority: 4,
     createdAt: new Date().toISOString(),
   },
+  {
+    _id: '5',
+    name: 'LENDAZ',
+    logo: '',
+    description: 'Brand',
+    priority: 5,
+    createdAt: new Date().toISOString(),
+  },
+  {
+    _id: '6',
+    name: 'Italian Embassy Ethiopia',
+    logo: 'https://ambaddisabeba.esteri.it/wp-content/themes/sedi-tema/assets/img/logo-mae.png',
+    description: 'Embassy',
+    priority: 6,
+    createdAt: new Date().toISOString(),
+  },
+  {
+    _id: '7',
+    name: 'La7',
+    logo: 'https://e7.pngegg.com/pngimages/785/1002/png-clipart-la7-italy-television-channel-logo-italy-television-blue.png',
+    description: 'Italian TV Channel',
+    priority: 7,
+    createdAt: new Date().toISOString(),
+  },
 ];
 
 const defaultAboutProfile: AboutProfile = {
