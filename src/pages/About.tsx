@@ -632,6 +632,46 @@ const About = () => {
         </div>
       </section>
 
+      {/* East Africa / Awards Section */}
+      <section className="py-24 border-t border-border">
+        <div className="px-6 md:px-12 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="overflow-hidden rounded-sm"
+            >
+              <img
+                src="https://res.cloudinary.com/dcj3zekyw/image/upload/q_auto/f_auto/v1779355544/IMG_3823_reuzkr.jpg"
+                alt="Ruby Pictures - East African Music Video"
+                className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
+              className="space-y-6"
+            >
+              <div className="w-10 h-px bg-ruby" />
+              <p className="font-mono text-xs uppercase tracking-[0.3em] text-ruby">Recognition</p>
+              <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tighter">Leading East African Music Video Production</h2>
+              <p className="text-foreground/70 text-lg leading-relaxed">
+                One of our works has established Ruby Pictures as a leading force in East African music video production — crafting visuals that transcend borders and connect cultures across the continent.
+              </p>
+              <div className="border-l-2 border-ruby pl-6 py-2">
+                <p className="text-foreground/80 text-base leading-relaxed">
+                  🏆 One of our works has been <strong>nominated for the African Arts Entertainment Awards</strong> in Nairobi, Kenya in 2025 — a testament to the quality and impact of our storytelling on the African stage.
+                </p>
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Clients Section - Black and White until hover */}
       {clientsData.length > 0 && (
         <section className="py-24 border-t border-border">
