@@ -26,6 +26,21 @@ jobs:
       - name: Copy index.html to 404.html for SPA routing
         run: cp dist/index.html dist/404.html
 
+      - name: Create static routes for direct URL access
+        run: |
+          mkdir -p dist/work/coffee
+          cp dist/index.html dist/work/coffee/index.html
+          mkdir -p dist/gallery
+          cp dist/index.html dist/gallery/index.html
+          mkdir -p dist/work/documentaries
+          cp dist/index.html dist/work/documentaries/index.html
+          mkdir -p dist/work/commercials
+          cp dist/index.html dist/work/commercials/index.html
+          mkdir -p dist/about
+          cp dist/index.html dist/about/index.html
+          mkdir -p dist/contact
+          cp dist/index.html dist/contact/index.html
+
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v3
         with:
