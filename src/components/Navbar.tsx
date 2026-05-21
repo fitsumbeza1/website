@@ -7,8 +7,8 @@ import { useCMS } from "@/contexts/CMSContext";
 const navItems = [
   { label: "Home", path: "/" },
   { label: "Work", path: "/work" },
-  { label: "Gallery", path: "/gallery" },
   { label: "About", path: "/about" },
+  { label: "Gallery", path: "/gallery" },
   { label: "Contact", path: "/contact" },
 ];
 
