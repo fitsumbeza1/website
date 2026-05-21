@@ -282,7 +282,7 @@ const About = () => {
   return (
     <Layout>
       {/* Page header with carousel */}
-      <section className="relative h-[50vh] flex items-end overflow-hidden">
+      <section className="relative h-[70vh] flex items-end overflow-hidden">
         <AnimatePresence mode="wait">
           {heroSlidesData.map((slide, index) => (
             index === currentSlide && (
@@ -349,6 +349,19 @@ const About = () => {
           <ChevronRight className="w-6 h-6" />
         </button>
 
+        {/* RUBY PICTURES — top left */}
+        <div className="absolute top-8 left-6 md:left-12 z-20">
+          <motion.h1
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+            className="font-display text-4xl md:text-6xl lg:text-7xl font-black tracking-tighter text-white uppercase"
+          >
+            RUBY PICTURES
+          </motion.h1>
+        </div>
+
+        {/* Subtitle — bottom */}
         <div className="relative z-10 px-6 md:px-12 pb-12 w-full max-w-7xl mx-auto">
           <motion.div
             key={currentSlide}
@@ -356,12 +369,12 @@ const About = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <p className="font-mono text-xs uppercase tracking-[0.3em] text-gray-300 mb-2">
-              {heroSlidesData[currentSlide].description}
+            <p className="font-mono text-xs uppercase tracking-[0.3em] text-ruby mb-3">
+              Est. Addis Ababa, Ethiopia
             </p>
-            <h1 className="font-display text-5xl md:text-7xl font-bold tracking-tighter text-white">
-              {heroSlidesData[currentSlide].title}
-            </h1>
+            <p className="font-display text-3xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-tight">
+              Premier Film Production<br className="hidden md:block" /> Company in East Africa
+            </p>
           </motion.div>
         </div>
       </section>
