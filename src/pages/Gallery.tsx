@@ -20,6 +20,18 @@ const galleryPhotos = [
     src: "https://res.cloudinary.com/dcj3zekyw/image/upload/q_auto/f_auto/v1779377787/25.Golden_Girl_1.90.1_dtndyz.png",
     caption: "Golden light on golden skin — a story told without a single word.",
   },
+  {
+    src: "https://res.cloudinary.com/dcj3zekyw/image/upload/q_auto/f_auto/v1779378569/crop-2_wqwveq.jpg",
+    caption: "In stillness, the most powerful stories reveal themselves.",
+  },
+  {
+    src: "https://res.cloudinary.com/dcj3zekyw/image/upload/q_auto/f_auto/v1779378564/1.27.1_1.27.1_y1unii.png",
+    caption: "A vision captured — the meeting point of art and truth.",
+  },
+  {
+    src: "https://res.cloudinary.com/dcj3zekyw/image/upload/q_auto/f_auto/v1779380019/crop-3_kbotej.jpg",
+    caption: "Where the lens meets the soul — raw, real, and unforgettable.",
+  },
 ];
 
 const Gallery = () => {
