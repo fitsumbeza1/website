@@ -44,10 +44,10 @@ const AnimatedRoutes = () => {
       <Routes location={location} key={location.pathname}>
         <Route path="/" element={<Index />} />
         <Route path="/work" element={<Work />} />
+        <Route path="/work/coffee" element={<CoffeeProject />} />
         <Route path="/work/:categoryId" element={<CategoryPage />} />
         <Route path="/work/:categoryId/:videoId" element={<VideoDetail />} />
         <Route path="/photos" element={<PhotosPage />} />
-        <Route path="/work/coffee" element={<CoffeeProject />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
