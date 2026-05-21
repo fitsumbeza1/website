@@ -40,9 +40,9 @@ const GHPagesRedirect = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const params = new URLSearchParams(window.location.search);
-    const redirect = params.get("p");
+    const redirect = sessionStorage.getItem("redirectPath");
     if (redirect) {
+      sessionStorage.removeItem("redirectPath");
       navigate(redirect, { replace: true });
     }
   }, [navigate]);

@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <title>Ruby Pictures</title>
     <script>
-      // Redirect all 404s back to index.html for SPA routing
+      // Save the path in sessionStorage and redirect to home
       var path = window.location.pathname;
       var search = window.location.search;
       var hash = window.location.hash;
-      var redirect = '/?p=' + encodeURIComponent(path + search) + hash;
-      window.location.replace(redirect);
+      sessionStorage.setItem('redirectPath', path + search + hash);
+      window.location.replace('/');
     </script>
   </head>
   <body></body>
