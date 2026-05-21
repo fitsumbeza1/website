@@ -298,12 +298,12 @@ const Index = () => {
               className={`h-32 md:h-40 invert brightness-0 brightness-200`} 
             />
             </div>
-            {/* Shine Your Light tagline - below logo */}
-            <p className="font-display text-2xl md:text-3xl font-light tracking-widest text-white/90 mb-4 italic">
-              Shine Your Own Light
+            {/* Main tagline */}
+            <p className="font-display text-2xl md:text-4xl lg:text-5xl font-bold text-white mb-3 leading-tight max-w-3xl mx-auto" style={{ fontStyle: 'italic', textShadow: '0 2px 20px rgba(0,0,0,0.5)' }}>
+              Favored by GOD, driven by vision —<br className="hidden md:block" /> turning stories into timeless cinema.
             </p>
-            <p className="text-gray-300 text-lg md:text-xl max-w-2xl mx-auto mb-8">
-              A film production company in Addis Ababa, Ethiopia
+            <p className="font-mono text-sm md:text-base uppercase tracking-[0.25em] text-gray-300 mb-8 max-w-2xl mx-auto">
+              Crafting powerful stories from Ethiopia to the world
             </p>
             <div className="flex items-center justify-center gap-4">
               <Link
