@@ -405,6 +405,14 @@ const defaultClients: Client[] = [
     priority: 7,
     createdAt: new Date().toISOString(),
   },
+  {
+    _id: '8',
+    name: 'Goflick',
+    logo: 'https://res.cloudinary.com/dcj3zekyw/image/upload/q_auto/f_auto/v1779355975/IMG_0740_tcanai.jpg',
+    description: '',
+    priority: 8,
+    createdAt: new Date().toISOString(),
+  },
 ];
 
 const defaultAboutProfile: AboutProfile = {
