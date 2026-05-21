@@ -672,6 +672,41 @@ const About = () => {
         </div>
       </section>
 
+      {/* Client Recommendation Section */}
+      <section className="py-24 border-t border-border">
+        <div className="px-6 md:px-12 max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
+              className="overflow-hidden rounded-sm"
+            >
+              <img
+                src="https://res.cloudinary.com/dcj3zekyw/image/upload/q_auto/f_auto/v1779357810/recommendation_page_1_gxbtzp.png"
+                alt="Client Recommendation"
+                className="w-full h-full object-cover hover:scale-105 transition-all duration-700"
+              />
+            </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 40 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8, delay: 0.15, ease: "easeOut" }}
+              className="space-y-6"
+            >
+              <div className="w-10 h-px bg-ruby" />
+              <p className="font-mono text-xs uppercase tracking-[0.3em] text-ruby">Testimonial</p>
+              <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tighter">Client Recommendation</h2>
+              <p className="text-foreground/70 text-lg leading-relaxed">
+                Our work speaks for itself. Here is a formal recommendation from one of our valued clients — a reflection of the trust, professionalism, and cinematic excellence Ruby Pictures delivers on every project.
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* Clients Section - Black and White until hover */}
       {clientsData.length > 0 && (
         <section className="py-24 border-t border-border">
